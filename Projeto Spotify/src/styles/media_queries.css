@@ -1,0 +1,5 @@
+@media screen and (max-width: 1015px) {
+    .main-content .main_caixa .listas .artistas-populares {
+        grid-template-columns: 1fr 1fr;
+    }
+}

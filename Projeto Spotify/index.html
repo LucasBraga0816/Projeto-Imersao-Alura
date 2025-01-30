@@ -5,61 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone Spotify</title>
     <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/vars.css">
     <link rel="stylesheet" href="src/styles/main.css">
     <link rel="stylesheet" href="src/styles/sidebar.css">
-    <link rel="stylesheet" href="src/styles/footer.css">
+    <link rel="stylesheet" href="src/styles/media_queries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css">
 </head>
 <body>
     <div class="sidebar">
-        <nav class="sidebar_navigation">
-            <div class="logo">
-               <a href="">
-                    <img src="./assets/icons/logo-spotify.png" alt="logo-spotify">
-               </a>
-            </div>
-                <ul>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-home"></span>
-                            <span>Início</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <span class="fa fa-search"></span>
-                            <span>Buscar</span>
-                        </a>
-                    </li>
-                </ul>
-        </nav>
-        <div class="library">
-            <div class="library_content">
-                <button class="library_button">
-                    <span class="fa fa-book"></span>
-                    <span>Sua biblioteca</span>
-                </button>
-                <button class="fa fa-plus"></button>
-            </div>
-            <section class="playlist">
-                <div class="playlist_content">
-                    <span class="title">Crie sua primeira playlist</span>
-                    <span class="subtitle"> É fácil, vamos te ajudar</span>
-                    <button class="playlist_button">Criar playlist</button>
+        <div class="sidebar_content">
+            <nav class="sidebar_navigation">
+                <div class="logo">
+                <a href="">
+                        <img src="./assets/icons/logo-spotify.png" alt="logo-spotify">
+                </a>
                 </div>
-            </section>
-            <div class="cookies">
-                <a href="">Cookies</a>
-            </div>
-            <div class="languages">
-                <button class="button">
-                    <span class="fa fa-globe"></span>
-                    <span>Português do Brasil</span>
-                </button>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-home"></span>
+                                <span>Início</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="fa fa-search"></span>
+                                <span>Buscar</span>
+                            </a>
+                        </li>
+                    </ul>
+            </nav>
+            <div class="library">
+                <div class="library_content">
+                    <button class="library_button">
+                        <span class="fa fa-book"></span>
+                        <span>Sua biblioteca</span>
+                    </button>
+                    <button class="fa fa-plus"></button>
+                </div>
+                <section class="playlist">
+                    <div class="playlist_content">
+                        <span class="title">Crie sua primeira playlist</span>
+                        <span class="subtitle"> É fácil, vamos te ajudar</span>
+                        <button class="playlist_button">Criar playlist</button>
+                    </div>
+                </section>
+                <div class="cookies">
+                    <a href="">Cookies</a>
+                </div>
+                <div class="languages">
+                    <button class="button">
+                        <span class="fa fa-globe"></span>
+                        <span>Português do Brasil</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+    <main>
+        <div class="main-conteiner">
+            <nav class="header__navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="assets/icons/small-left.png" alt="Seta para Esquerda">
+                    </button>
+                    <button class="arrow-right">
+                        <img src="assets/icons/small-right.png" alt="Seta para Direita">
+                    </button>
+                </div>
+                <div class="header__search">
+                    <img src="assets/icons/search.png" alt="">
+                    <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?">
+                </div>
+                <div class="header__login">
+                    <button class="subscribe">Inscreva-se</button>
+                    <button class="login">Entrar</button>
+                </div>
+            </nav>
+            <nav class="main-content">
+                <div class="main_caixa" id="result-playlists">
+                    <div class="text">
+                        <span class="text title">Artistas populares</span>
+                    </div>
+
+                    <!-- LIST DE CARDS -->
+                    <div class="listas">
+                        <ul class="artistas-populares">
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            <div class="artistas">
+                                <img src="assets/playlist/henriqueejuliano.jpg" alt="">
+                                <span class="title">Henrique e Juliano</span>
+                                <span class="subtitle">Artista</span>
+                            </div>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div id="result-artist" class="hidden">
+                    <div class="grid-container">
+                        <div class="artist-card" id="">
+                            <div class="card-img">
+                                <img id="artist-img" class="artist-img" />
+                                <div class="play">
+                                    <span class="fa fa-solid fa-play"></span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                <a title="Foo Fighters" class="vst" href=""></a>
+                                <span class="artist-name" id="artist-name"></span>
+                                <span class="artist-categorie">Artista</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </main>
     <footer class="premium">
         <div class="footer__content">
             <a href="">
@@ -71,5 +173,6 @@
             </button>
         </div>
     </footer>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
